@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "bcd20009-e022-4f44-92eb-7d5741e49f4c",
+		"name": "Test Tempo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "831327"
+	},
+	"item": [
+		{
+			"name": "Porcentaje",
+			"item": [
+				{
+					"name": "Current",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{mock-host}}:{{mock-port}}/tempo/v1/percentage/current",
+							"protocol": "http",
+							"host": [
+								"{{mock-host}}"
+							],
+							"port": "{{mock-port}}",
+							"path": [
+								"tempo",
+								"v1",
+								"percentage",
+								"current"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pricing",
+			"item": [
+				{
+					"name": "Current",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{api-host}}:{{api-port}}/tempo/v1/pricing/caculate/214748364/214748364",
+							"protocol": "http",
+							"host": [
+								"{{api-host}}"
+							],
+							"port": "{{api-port}}",
+							"path": [
+								"tempo",
+								"v1",
+								"pricing",
+								"caculate",
+								"214748364",
+								"214748364"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History todos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{api-host}}:{{api-port}}/tempo/v1/history/index?page=0&size=5",
+							"protocol": "http",
+							"host": [
+								"{{api-host}}"
+							],
+							"port": "{{api-port}}",
+							"path": [
+								"tempo",
+								"v1",
+								"history",
+								"index"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History exitosos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{api-host}}:{{api-port}}/tempo/v1/history/index?status=SUCCESSFUL",
+							"protocol": "http",
+							"host": [
+								"{{api-host}}"
+							],
+							"port": "{{api-port}}",
+							"path": [
+								"tempo",
+								"v1",
+								"history",
+								"index"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "SUCCESSFUL"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History fallidos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{api-host}}:{{api-port}}/tempo/v1/history/index?status=FAILED",
+							"protocol": "http",
+							"host": [
+								"{{api-host}}"
+							],
+							"port": "{{api-port}}",
+							"path": [
+								"tempo",
+								"v1",
+								"history",
+								"index"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "FAILED"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "mock-host",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "mock-port",
+			"value": "8081",
+			"type": "string"
+		},
+		{
+			"key": "api-host",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "api-port",
+			"value": "8080",
+			"type": "string"
+		}
+	]
+}

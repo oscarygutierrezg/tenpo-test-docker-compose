@@ -1,0 +1,45 @@
+version: '3'
+services:
+  pgsqldb:
+    image: postgres
+    env_file:
+      - database.env 
+    ports:
+      - '5432:5432'
+    hostname: pgsqldb
+    container_name: pgsqldb
+    networks:
+      - network-tempo
+  redisdb:
+    image: 'bitnami/redis:latest'
+    hostname: redisdb
+    container_name: redisdb
+    ports:
+      - '6379:6379'
+    environment:
+      ALLOW_EMPTY_PASSWORD: yes
+    networks:
+      - network-tempo
+  backendmock:
+    image:  "oscarygutierrezg/test-tempo-backend-mock"
+    hostname: backendmock
+    container_name: backendmock
+    ports:
+      - "8081:8081"
+    networks:
+      - network-tempo
+  backend:
+    image:  "oscarygutierrezg/test-tempo-backend"
+    container_name: backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - pgsqldb
+      - redisdb
+      - backendmock
+    restart: always
+    networks:
+      - network-tempo
+networks:
+  network-tempo:
+    driver: bridge
