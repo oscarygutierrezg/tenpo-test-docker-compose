@@ -1,4 +1,4 @@
-# test-tempo-docker-compose
+# test-tenpo-docker-compose
 
 ## Documentacion
 La documentación para ejecución 
@@ -15,5 +15,5 @@ Para levantar todo el stack
 $ docker-compose up
 ```
 ## Documentacion del API
-La documentación en formato OpenAPI está disponible [aquí](http://localhost:8080/tempo/swagger-ui/index.html) <br />
-La colección de postman está disponible [aquí](https://raw.githubusercontent.com/oscarygutierrezg/test-tempo-docker-compose/main/Tempo.postman_collection.json)
+La documentación en formato OpenAPI está disponible [aquí](http://localhost:8080/tenpo/swagger-ui/index.html) <br />
+La colección de postman está disponible [aquí](https://raw.githubusercontent.com/oscarygutierrezg/tenpo-test-docker-compose/main/Test_Tenpo.postman_collection.json)
