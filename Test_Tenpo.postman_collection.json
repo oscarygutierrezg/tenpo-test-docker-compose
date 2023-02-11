@@ -29,14 +29,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://{{mock-host}}:{{mock-port}}/tempo/v1/percentage/current",
+							"raw": "http://{{mock-host}}:{{mock-port}}/tenpo/v1/percentage/current",
 							"protocol": "http",
 							"host": [
 								"{{mock-host}}"
 							],
 							"port": "{{mock-port}}",
 							"path": [
-								"tempo",
+								"tenpo",
 								"v1",
 								"percentage",
 								"current"
@@ -82,14 +82,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{api-host}}:{{api-port}}/tempo/v1/pricing/caculate/214748364/214748364",
+							"raw": "http://{{api-host}}:{{api-port}}/tenpo/v1/pricing/caculate/214748364/214748364",
 							"protocol": "http",
 							"host": [
 								"{{api-host}}"
 							],
 							"port": "{{api-port}}",
 							"path": [
-								"tempo",
+								"tenpo",
 								"v1",
 								"pricing",
 								"caculate",
@@ -132,14 +132,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{api-host}}:{{api-port}}/tempo/v1/history/index?page=0&size=5",
+							"raw": "http://{{api-host}}:{{api-port}}/tenpo/v1/history/index?page=0&size=5",
 							"protocol": "http",
 							"host": [
 								"{{api-host}}"
 							],
 							"port": "{{api-port}}",
 							"path": [
-								"tempo",
+								"tenpo",
 								"v1",
 								"history",
 								"index"
@@ -190,14 +190,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{api-host}}:{{api-port}}/tempo/v1/history/index?status=SUCCESSFUL",
+							"raw": "http://{{api-host}}:{{api-port}}/tenpo/v1/history/index?status=SUCCESSFUL",
 							"protocol": "http",
 							"host": [
 								"{{api-host}}"
 							],
 							"port": "{{api-port}}",
 							"path": [
-								"tempo",
+								"tenpo",
 								"v1",
 								"history",
 								"index"
@@ -244,14 +244,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{api-host}}:{{api-port}}/tempo/v1/history/index?status=FAILED",
+							"raw": "http://{{api-host}}:{{api-port}}/tenpo/v1/history/index?status=FAILED",
 							"protocol": "http",
 							"host": [
 								"{{api-host}}"
 							],
 							"port": "{{api-port}}",
 							"path": [
-								"tempo",
+								"tenpo",
 								"v1",
 								"history",
 								"index"

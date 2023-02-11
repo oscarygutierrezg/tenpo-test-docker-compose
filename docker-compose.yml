@@ -9,7 +9,7 @@ services:
     hostname: pgsqldb
     container_name: pgsqldb
     networks:
-      - network-tempo
+      - network-tenpo
   redisdb:
     image: 'bitnami/redis:latest'
     hostname: redisdb
@@ -19,17 +19,17 @@ services:
     environment:
       ALLOW_EMPTY_PASSWORD: yes
     networks:
-      - network-tempo
+      - network-tenpo
   backendmock:
-    image:  "oscarygutierrezg/test-tempo-backend-mock"
+    image:  "oscarygutierrezg/test-tenpo-backend-mock"
     hostname: backendmock
     container_name: backendmock
     ports:
       - "8081:8081"
     networks:
-      - network-tempo
+      - network-tenpo
   backend:
-    image:  "oscarygutierrezg/test-tempo-backend"
+    image:  "oscarygutierrezg/test-tenpo-backend"
     container_name: backend
     ports:
       - "8080:8080"
@@ -39,7 +39,7 @@ services:
       - backendmock
     restart: always
     networks:
-      - network-tempo
+      - network-tenpo
 networks:
-  network-tempo:
+  network-tenpo:
     driver: bridge
