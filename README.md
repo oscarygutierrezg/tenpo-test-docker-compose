@@ -15,5 +15,5 @@ Para levantar todo el stack
 $ docker-compose up
 ```
 ## Documentacion del API
-La documentación en formato OpenAPI está disponible [aqui](http://localhost:8080/tempo/swagger-ui/index.html)
-La colección de postman está disponible [aqui](Test Tempo.postman_collection.json)
+La documentación en formato OpenAPI está disponible [aqui](http://localhost:8080/tempo/swagger-ui/index.html) <br />
+La colección de postman está disponible [aqui](https://raw.githubusercontent.com/oscarygutierrezg/test-tempo-docker-compose/main/Tempo.postman_collection.json)
