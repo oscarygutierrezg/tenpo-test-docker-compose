@@ -27,7 +27,18 @@
 							"type": "noauth"
 						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://{{mock-host}}:{{mock-port}}/tenpo/v1/percentage/current",
 							"protocol": "http",
@@ -51,7 +62,7 @@
 			"name": "Pricing",
 			"item": [
 				{
-					"name": "Current",
+					"name": "pricing",
 					"event": [
 						{
 							"listen": "test",
